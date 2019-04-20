@@ -18,4 +18,6 @@ Levelling system,
 Pick up items 
 
 
+Thanks to Christian Thompson which inspire me with his'Maze Game'to create this. 
+
 
