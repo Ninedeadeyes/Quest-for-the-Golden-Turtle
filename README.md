@@ -18,6 +18,8 @@ Levelling system,
 Pick up items 
 
 
+Download all files to run the exe file. 
+
 Will also re-do all artwork since they are a bit rubbish at the moment. 
 
 
