@@ -21,6 +21,4 @@ Pick up items
 Will also re-do all artwork since they are a bit rubbish at the moment. 
 
 
-Thanks to Christian Thompson which inspire me with his Maze Game to create this. 
-
 
