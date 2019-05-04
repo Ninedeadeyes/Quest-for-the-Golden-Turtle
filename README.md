@@ -4,7 +4,7 @@ A simple hack and slash dungeon crawler written in standard python 3.7 library.
 
 Features
 
-- Mutliple dungeon levels 
+- Multiple dungeon levels 
 - Onscreen stats - gold,experience and lives 
 - Hack and slash (gauntlet style) play 
 - Sound effects 
