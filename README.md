@@ -1,6 +1,6 @@
 # Quest-for-the-Golden-Turtle
 
-A simple hack and slash dungeon crawler written in the standard python library. 
+A simple hack and slash dungeon crawler written in standard python 3.7 library. 
 
 Features
 
