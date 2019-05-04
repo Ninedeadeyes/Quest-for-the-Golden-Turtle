@@ -2,29 +2,22 @@
 
 A simple hack and slash dungeon crawler written in the standard python library. 
 
-This is a very Alpha build 
+Features
 
-Includes 
-
-Hack and slash action, 
-Multiple dungeon levels, 
-'Gold' Scoring system,
-Sound effects 
-
-Would like to add RPG elements including 
-
-Health system, 
-Levelling system, 
-Pick up items 
+- Mutlipy dungeon levels 
+- Onscreen stats - gold,experience and lives 
+- Hack and slash (gauntlet style) play 
+- Sound effects 
+- Death and Ending functions
+- 8 bits pixel graphics 
 
 
-Download all files to run the exe file. 
+All graphics created using GraphicsGale and lospec.com/pixel-editor
 
-Will also re-do all artwork since they are a bit rubbish at the moment. 
+All sounds downloaded from https://freesound.org 
 
+To play without python download all files and run the exe file. 
 
-Special Thanks to Christian Thompson, check out his python youtube vids. 
- 
 
 
 
