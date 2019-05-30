@@ -18,6 +18,6 @@ All sounds downloaded from https://freesound.org
 
 To play without python download all files and run the exe file. 
 
-Special Thanks to Christian Thompson
+Special Thanks to Christian Thompson ( Youtuber) 
 
 
