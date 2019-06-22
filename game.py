@@ -19,73 +19,14 @@ images=[".\\art\\wall.gif",".\\art\\orkleft.gif",".\\art\\ork.gif",".\\art\\orku
 for image in images:
     turtle.register_shape(image)
 
-class Life(turtle.Turtle):
-    def __init__(self):
-        super().__init__()
-        self.lives=3
 
-
-
-    def show_lives(self):
-        self.ht()
-        self.up()
-        self.goto(250,-380)
-        self.color("white")
-        msg = " Credit:%s" %(life.lives)        
-        self.write(msg, font=("Arial", 16, "normal"))
-    
-    def update_lives(self):
-        self.undo()
-        self.ht()
-        self.up()
-        self.goto(250,-380)
-        self.color("white")
-        msg = "Credit:%s" %(life.lives)        
-        self.write(msg, font=("Arial", 16, "normal"))
-
-
-
-
-
-class Xp(turtle.Turtle):
-    def __init__(self):
-        super().__init__()
-        self.exp =0
- 
-
-    def show_status2(self):
-        self.ht()
-        self.up()
-        self.goto(250,334)
-        self.color("white")
-        msg = " XP:%s" %(xp.exp)        
-        self.write(msg, font=("Arial", 16, "normal"))
-    
-    def update_status2(self):
-        self.undo()
-        self.ht()
-        self.up()
-        self.goto(250,334)
-        self.color("white")
-        msg = " XP:%s" %(xp.exp)        
-        self.write(msg, font=("Arial", 16, "normal"))
-        
-
-
-    def lose(self):     #this is just experimenting , not in game
-        wn.clear()
-        wn.bgcolor("blue")
-        self.goto(0, 0)
-        self.color("white")
-        self.write("Sorry, you lose."'\n'  "Your xp: {} points".format(self.exp), False, align="center",
-                         font=("Arial", 16, "normal"))
-
-
-class Game():
+class Info():
     def __init__(self):
         self.gold = 0
         self.exp =0
+        self.lives=3
         self.pen = turtle.Turtle()
+
         
     def draw_border(self):
         #Draw border
@@ -105,7 +46,7 @@ class Game():
         self.pen.ht()
         self.pen.pendown()
         
-    def show_status(self):
+    def show_gold(self):
         self.pen.undo()
         msg = "Gold: %s"  %(game.gold)
         self.pen.penup()
@@ -143,6 +84,32 @@ class Game():
         self.pen.goto(-250,304)
         self.pen.write(msg, font=("Arial", 16, "normal"))
         
+    def show_lives(self):
+        self.pen.undo()
+        msg = " Credit:%s" %(life.lives)
+        self.pen.penup()
+        self.pen.goto(250,-380)
+        self.pen.color("white")         
+        self.pen.write(msg, font=("Arial", 16, "normal"))
+    
+
+    def show_exp(self):
+        self.pen.undo()
+        self.pen.penup()
+        self.pen.goto(250,334)
+        self.pen.color("white")
+        msg = " XP:%s" %(xp.exp)        
+        self.pen.write(msg, font=("Arial", 16, "normal"))
+    
+    
+
+    def lose(self):     #this is just experimenting , not in game
+        wn.clear()
+        wn.bgcolor("blue")
+        self.goto(0, 0)
+        self.color("white")
+        self.write("Sorry, you lose."'\n'  "Your xp: {} points".format(self.exp), False, align="center",
+                         font=("Arial", 16, "normal"))
 
         
 
@@ -745,13 +712,13 @@ walls=[]
 setup_maze(levels[1])
 maze=("level1")
 
-life=Life()
-xp=Xp()
-game=Game()
+life=Info()
+xp=Info()
+game=Info()
 game.draw_border()
 game.show_rules()
-game.show_status()
-xp.show_status2()
+game.show_gold()
+xp.show_exp()
 life.show_lives()
 
 
@@ -792,22 +759,20 @@ while True:
             game.win()
             winsound.PlaySound(".\\sound\\victory.wav",0)
             
-            
-        
-        
+                 
 
     for enemy in enemies:
         if missile.is_collision(enemy):
             Enemy.destroy(enemy)
             missile.status = "ready"
             xp.exp += enemy.exp
-            xp.update_status2()
+            xp.show_exp()
             winsound.PlaySound(".\\sound\\orkdeath.wav", winsound.SND_ASYNC)
             
     for coin in coins:
         if player.is_collision(coin):
             game.gold += coin.gold
-            game.show_status()
+            game.show_gold()
             #print("Player Gold: {}".format (game.gold))
             coin.destroy()
             coins.remove(coin)
@@ -834,15 +799,15 @@ while True:
                 #xp.lose()    
                 player.destroy()
                 setup_maze(levels[1])
-                life.update_lives()
+                life.show_lives()
                 break
             
             
             game.gold=0
             xp.exp=0
-            xp.update_status2()
-            life.update_lives()
-            game.show_status()
+            xp.show_exp()
+            life.show_lives()
+            game.show_gold()
             setup_maze(levels[1])
             maze=("level1")
             for enemy in enemies:
