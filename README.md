@@ -21,3 +21,5 @@ To play without python download all files and run the exe file.
 Special Thanks to Christian Thompson ( Youtuber) 
 
 
+Pac Man Vs The Goblin of Doom is a modded version demonstrating movement animation using the standard library. 
+
