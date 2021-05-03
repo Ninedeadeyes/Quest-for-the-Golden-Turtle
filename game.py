@@ -246,7 +246,7 @@ class Player(turtle.Turtle):
             self.right=1
 
         self.shape(".\\art\\heroright.gif")
-        missile.shape(".\\art\\arrowright.gif")
+        missile.shape(".\\art\\arrowright.gif")  #This is needed because it change the character directon shape to the direction of the fire. 
         missile.fire()
 
 
