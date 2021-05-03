@@ -228,7 +228,7 @@ class Player(turtle.Turtle):
             self.up=0
             self.right=1
 
-            
+        self.shape(".\\art\\pacman_right_2.gif")    
         missile.shape(".\\art\\fire.gif")
         missile.fire()
 
@@ -257,6 +257,7 @@ class Player(turtle.Turtle):
             self.right=0
             self.down=1
 
+        self.shape(".\\art\\pacman_down_2.gif")  
         missile.shape(".\\art\\fire.gif")
         missile.fire()
 
@@ -284,7 +285,8 @@ class Player(turtle.Turtle):
             self.rt(90)
             self.down=0
             self.left=1
-            
+
+        self.shape(".\\art\\pacman_left_2.gif")      
         missile.shape(".\\art\\fire.gif")
         missile.fire()
             
@@ -310,7 +312,8 @@ class Player(turtle.Turtle):
             self.rt(90)
             self.left=0
             self.up=1
-            
+
+        self.shape(".\\art\\pacman_up_2.gif")     
         missile.shape(".\\art\\fire.gif")
         missile.fire()
             
