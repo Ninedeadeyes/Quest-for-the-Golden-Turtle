@@ -60,8 +60,8 @@ class Info():
         self.pen.goto(-324, -380)
         self.pen.write(msg, font=("Arial", 16, "normal"))
         self.pen.pendown()
-        #self.pen.penup()
-        #self.pen.ht()
+        self.pen.penup()
+        self.pen.ht()
      
 
     def win(self):
@@ -88,6 +88,7 @@ class Info():
         self.pen.undo()
         msg = " Credit:%s" %(life.lives)
         self.pen.penup()
+        self.pen.ht()
         self.pen.goto(250,-380)
         self.pen.color("white")         
         self.pen.write(msg, font=("Arial", 16, "normal"))
@@ -96,6 +97,7 @@ class Info():
     def show_exp(self):
         self.pen.undo()
         self.pen.penup()
+        self.pen.ht()
         self.pen.goto(250,334)
         self.pen.color("white")
         msg = " XP:%s" %(xp.exp)        
@@ -859,4 +861,3 @@ while True:
 
     wn.update()
 
-#https://github.com/Ninedeadeyes/Quest-for-the-Golden-Turtle
