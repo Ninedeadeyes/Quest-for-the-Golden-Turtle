@@ -20,6 +20,10 @@ To play without python download all files and run the exe file.
 
 Special Thanks to Christian Thompson ( Youtuber) 
 
+based of the Maze Game Tutorial
+
+https://www.youtube.com/watch?v=-0q_miviUDs&ab_channel=TokyoEdtech
+
 
 Pac Man Vs The Goblin of Doom is a modded version demonstrating movement animation using the standard library. 
 
