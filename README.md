@@ -27,3 +27,6 @@ https://www.youtube.com/watch?v=-0q_miviUDs&ab_channel=TokyoEdtech
 
 Pac Man Vs The Goblin of Doom is a modded version demonstrating movement animation using the standard library. 
 
+Check out my other Python Games at 
+
+https://ninedeadeyes.github.io/Python-Game-Gallery/
